@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package messages;
+
+message NodeRequest {
+  bytes request_id = 1;
+  bytes distance_list = 2;
+}
+
+message NodeResponse {
+  bytes request_id = 1;
+}

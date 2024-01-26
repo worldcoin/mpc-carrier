@@ -1,0 +1,27 @@
+[package]
+name = "mpc-carrier"
+version = "0.1.0"
+authors = ["Valentyn Valiaiev <valentine.valyaeff@gmail.com>"]
+edition = "2021"
+description = "Worldcoin MPC communication channel"
+
+[dependencies]
+async-stream = "0.3.5"
+futures = "0.3.30"
+prost = "0.12.3"
+rustls = "0.22.2"
+rustls-pemfile = "2.0.0"
+thiserror = "1.0.56"
+tokio = { version = "1.35.1", features = ["rt-multi-thread", "io-util"] }
+tokio-rustls = "0.25.0"
+tokio-stream = { version = "0.1.14", features = ["net"] }
+tracing = "0.1.40"
+webpki-roots = "0.26.0"
+
+[build-dependencies]
+prost-build = "0.12.3"
+
+[dev-dependencies]
+clap = { version = "4.4.18", features = ["derive"] }
+tokio = { version = "1.35.1", features = ["macros"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
